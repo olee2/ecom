@@ -1,18 +1,14 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import Header from "../header";
 import Footer from "../footer";
 import "./styles.scss";
 
-interface Props {
-  children: React.ReactNode;
-}
-
-function Layout(props: Props) {
-  const { children } = props;
+function Layout() {
   return (
     <div className="layout">
       <Header />
-      <main>{children}</main>
+      <Outlet />
       <Footer />
     </div>
   );

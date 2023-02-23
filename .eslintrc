@@ -4,5 +4,5 @@
   "plugins": ["@typescript-eslint", "prettier"],
   "extends": ["airbnb", "airbnb-typescript", "prettier"],
   "parserOptions": { "project": "./tsconfig.json" },
-  "rules": { "prettier/prettier": 2 }
+  "rules": { "prettier/prettier": 2, "import/no-extraneous-dependencies": 0 }
 }

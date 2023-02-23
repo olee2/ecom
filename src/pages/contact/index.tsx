@@ -1,5 +1,7 @@
 import React from "react";
 
-const index = () => <div />;
+function Contact() {
+  return <h1>Contact</h1>;
+}
 
-export default index;
+export default Contact;
