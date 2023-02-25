@@ -1,2 +1,12 @@
 @import "./reset";
 @import "./variables";
+
+html,
+body {
+  font-family: poppins;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}

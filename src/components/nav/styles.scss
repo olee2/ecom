@@ -1,4 +1,71 @@
+@import "../../styles/variables";
+
 nav {
   display: flex;
-  gap: 1rem;
+  flex: 1;
+  gap: 2rem;
+  font-size: 1.1rem;
+  justify-content: end;
+
+  .link-container {
+    gap: 2rem;
+    display: flex;
+  }
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: $nav-text-color;
+
+    &:hover {
+      color: $nav-hover-color;
+    }
+  }
+
+  .hamburger {
+    padding: 5px;
+    border: 1px solid #6f4bf2;
+    background-color: $bg-light;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: $small) {
+    .hamburger {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $small) {
+    .nav-container {
+      position: absolute;
+      transition: 0.3s;
+      border-bottom: 1px solid $border-color;
+      padding: 20px;
+      width: 100%;
+      background-color: $bg-light;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 91px;
+      right: -700px;
+      gap: 1rem;
+    }
+
+    .show {
+      right: 0;
+    }
+
+    .link-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
 }

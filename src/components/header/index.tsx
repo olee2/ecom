@@ -1,11 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Nav from "../nav";
+import logo from "../../assets/logo.png";
+
 import "./styles.scss";
 
 function Header() {
   return (
     <header>
-      <Nav />
+      <div className="inner-header">
+        <div className="logo-nav">
+          <Link to="/">
+            <img src={logo} alt="" className="logo" />
+          </Link>
+          <Nav />
+        </div>
+      </div>
     </header>
   );
 }
