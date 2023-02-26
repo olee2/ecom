@@ -1,0 +1,35 @@
+@import "../../styles/variables";
+
+.hero {
+  background-image: linear-gradient(
+      rgba(248, 249, 250, 0.6),
+      rgba(248, 249, 250, 0.9),
+      rgba(248, 249, 250, 0.9),
+      rgba(248, 249, 250, 0.6)
+    ),
+    url("../../assets/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 25rem;
+  color: $blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .inner-hero {
+    max-width: 1100px;
+    width: 100%;
+    padding: 1rem;
+    margin-inline: auto;
+    display: flex;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}

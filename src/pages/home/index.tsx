@@ -1,10 +1,11 @@
 import React from "react";
 import "./styles.scss";
+import Hero from "../../components/Hero";
 
 function Home() {
   return (
     <main>
-      <h1>Home</h1>
+      <Hero />
     </main>
   );
 }
