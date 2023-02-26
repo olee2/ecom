@@ -8,7 +8,7 @@ import "./styles.scss";
 function Header() {
   return (
     <header>
-      <div className="inner-header">
+      <div className="inner-header inner-container">
         <div className="logo-nav">
           <Link to="/">
             <img src={logo} alt="" className="logo" />
