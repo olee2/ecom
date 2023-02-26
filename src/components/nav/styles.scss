@@ -35,7 +35,8 @@ nav {
     border-radius: 5px;
     cursor: pointer;
     img {
-      transition: 0.2s;
+      transition: 0.1s;
+      width: 1.5rem;
     }
   }
 
@@ -52,7 +53,7 @@ nav {
   @media screen and (max-width: $small) {
     .nav-container {
       position: absolute;
-      transition: 0.2s;
+      transition: 0.1s;
       right: 0;
       width: 100%;
       background-color: $bg-light;
