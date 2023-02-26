@@ -1,3 +1,24 @@
+@import "../../styles/variables";
 footer {
-  width: 100%;
+  background-color: $bg-light;
+  border-top: 1px solid $border-color;
+  color: $blue;
+
+  .copyright-container {
+    display: flex;
+    gap: 0.3rem;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .copyright {
+    width: 0.9rem;
+  }
 }
