@@ -20,7 +20,11 @@ function Nav() {
   return (
     <nav>
       <button type="button" className="hamburger" onClick={handleDisplay}>
-        <img src={hamburger} alt="" />
+        <img
+          src={hamburger}
+          className={`${display && "active-hamburger"}`}
+          alt=""
+        />
       </button>
 
       <div className={`nav-container ${display && "show"}`}>
