@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 import hamburger from "../../assets/hamburger.svg";
 import "./styles.scss";
-import Cart from "../Cart";
+import Cart from "../cart";
 
 function Nav() {
   const location = useLocation();
