@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.scss";
+import "./footer.scss";
 import Copyright from "../../assets/copyright.svg";
 
 function Footer() {
