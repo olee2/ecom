@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../../components/hero";
 import { useProductContext } from "../../components/productProvider";
 import Card from "../../components/card";
-import "./styles.scss";
+import "./home.scss";
 
 function Home() {
   const products = useProductContext();

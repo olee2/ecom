@@ -1,6 +1,6 @@
 import React from "react";
 import cart from "../../assets/cart.svg";
-import "./styles.scss";
+import "./cart.scss";
 
 function Cart() {
   return (
