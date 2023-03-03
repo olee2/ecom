@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./card.scss";
 
 interface IProduct {
   id: string;
@@ -23,9 +25,28 @@ function Card({
   tags,
   reviews,
 }: IProduct) {
+  console.log(
+    id,
+    title,
+    description,
+    price,
+    discountedPrice,
+    rating,
+    tags,
+    reviews
+  );
   return (
-    <div>
-      <h1>{title}</h1>
+    <div className="card">
+      <div
+        className="image-container"
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      />
+      <div className="info-container">
+        <Link to={`/product/${id}`} />
+        <h2>{title}</h2>
+        <p className="description">{description}</p>
+        <p className="price">$ {price}</p>
+      </div>
     </div>
   );
 }

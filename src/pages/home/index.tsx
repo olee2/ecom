@@ -12,7 +12,7 @@ function Home() {
   return (
     <main>
       <Hero />
-      <div>
+      <div className="grid">
         {products.map((product) => {
           const {
             id,

@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+.card {
+  width: 100%;
+  max-width: 600px;
+  box-shadow: rgba(111, 75, 242, 0.1) 0px 0px 0px 1px;
+}
+
+.image-container {
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.info-container {
+  padding: 1rem;
+}
+
+.description {
+  font-size: 1rem;
+}
+
+.price {
+  font-size: 1.2rem;
+}
