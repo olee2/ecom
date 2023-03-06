@@ -1,51 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./card.scss";
+import IProduct from "../../models/IProduct";
 
-interface IProduct {
-  id: string;
-  title: string;
-  description: string;
-  price: number;
-  discountedPrice: number;
-  imageUrl: string;
-  rating: number;
-  tags: object;
-  reviews: object;
-}
-
-function Card({
-  id,
-  title,
-  description,
-  price,
-  discountedPrice,
-  imageUrl,
-  rating,
-  tags,
-  reviews,
-}: IProduct) {
-  console.log(
-    id,
-    title,
-    description,
-    price,
-    discountedPrice,
-    rating,
-    tags,
-    reviews
-  );
+function Card(props: IProduct) {
+  const { id, title, description, price, imageUrl, discountedPercent } = props;
   return (
     <div className="card">
       <div
         className="image-container"
         style={{ backgroundImage: `url(${imageUrl})` }}
       />
+      {discountedPercent && (
+        <p className="discount">{discountedPercent}% Discount</p>
+      )}
       <div className="info-container">
-        <Link to={`/product/${id}`} />
-        <h2>{title}</h2>
-        <p className="description">{description}</p>
-        <p className="price">$ {price}</p>
+        <div>
+          <h2>{title}</h2>
+          <p className="description">{description}</p>
+        </div>
+        <div className="priceBtnContainer">
+          <p className="price">$ {price}</p>
+          <Link className="btn" to={`/product/${id}`}>
+            View Product
+          </Link>
+        </div>
       </div>
     </div>
   );

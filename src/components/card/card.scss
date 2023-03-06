@@ -1,25 +1,79 @@
 @import "../../styles/variables";
 
 .card {
+  position: relative;
   width: 100%;
   max-width: 600px;
-  box-shadow: rgba(111, 75, 242, 0.1) 0px 0px 0px 1px;
+  border-radius: 5px;
+  box-shadow: rgba(111, 75, 242, 0.15) 0px 0px 0px 1px;
+  transition: 0.15s;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    font-weight: 400;
+    color: $blue;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
 
 .image-container {
   height: 300px;
   background-position: center;
+  border-radius: 5px 5px 0 0;
   background-repeat: no-repeat;
 }
 
 .info-container {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2rem;
 }
 
 .description {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .price {
   font-size: 1.2rem;
+}
+
+.discount {
+  position: absolute;
+  padding: 0.5rem;
+  background-color: $yellow;
+  left: 0;
+  top: 0;
+  border-radius: 5px 0 5px 0;
+  font-size: 1rem;
+}
+
+.priceBtnContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.5rem;
+  border: 1px solid $purple;
+  color: $purple;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $purple;
+    color: white;
+  }
 }

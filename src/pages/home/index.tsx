@@ -7,8 +7,6 @@ import "./home.scss";
 function Home() {
   const products = useProductContext();
 
-  console.log(products);
-
   return (
     <main>
       <Hero />
@@ -24,6 +22,7 @@ function Home() {
             rating,
             tags,
             reviews,
+            discountedPercent,
           } = product;
           return (
             <Card
@@ -36,6 +35,7 @@ function Home() {
               rating={rating}
               tags={tags}
               reviews={reviews}
+              discountedPercent={discountedPercent}
             />
           );
         })}
