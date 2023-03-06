@@ -18,7 +18,6 @@ const discounts = (products: []) => {
 
     if (discountedPrice !== price) {
       discountedPercent = Math.floor(((price - discountedPrice) / price) * 100);
-      console.log(discountedPercent);
     } else {
       discountedPercent = null;
     }
