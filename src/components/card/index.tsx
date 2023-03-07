@@ -4,7 +4,15 @@ import "./card.scss";
 import IProduct from "../../models/IProduct";
 
 function Card(props: IProduct) {
-  const { id, title, description, price, imageUrl, discountedPercent } = props;
+  const {
+    id,
+    title,
+    description,
+    price,
+    imageUrl,
+    discountedPercent,
+    discountedPrice,
+  } = props;
   return (
     <div className="card">
       <div
@@ -20,7 +28,15 @@ function Card(props: IProduct) {
           <p className="description">{description}</p>
         </div>
         <div className="priceBtnContainer">
-          <p className="price">$ {price}</p>
+          {discountedPrice !== price ? (
+            <div>
+              {" "}
+              <p className="old-price">NOK {price}</p>
+              <p className="price">NOK {discountedPrice}</p>
+            </div>
+          ) : (
+            <p className="price">NOK {price}</p>
+          )}
           <Link className="btn" to={`/product/${id}`}>
             View Product
           </Link>
