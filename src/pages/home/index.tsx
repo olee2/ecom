@@ -36,6 +36,7 @@ function Home() {
               tags={tags}
               reviews={reviews}
               discountedPercent={discountedPercent}
+              key={id}
             />
           );
         })}
