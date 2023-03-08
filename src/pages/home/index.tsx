@@ -14,6 +14,7 @@ function Home() {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
+    setLoader(true);
     fetchData()
       .then((data) => {
         const withDiscount = discounts(data);
@@ -27,7 +28,6 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    setLoader(true);
     let match: IProduct[] = [];
     let allItems: IProduct[] = [];
     const value = localStorage.getItem("allProducts");
@@ -41,15 +41,12 @@ function Home() {
       if (match.length) {
         setNotFound(false);
         setProducts(match);
-        setLoader(false);
       } else {
         setNotFound(true);
-        setLoader(false);
       }
     } else {
       setProducts(allItems);
       setNotFound(false);
-      setLoader(false);
     }
 
     console.log(match);
