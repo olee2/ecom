@@ -69,20 +69,6 @@
   color: $text-color;
 }
 
-.btn {
-  text-decoration: none;
-  padding: 0.5rem;
-  border: 1px solid $purple;
-  color: $purple;
-  border-radius: 5px;
-  transition: 0.2s;
-
-  &:hover {
-    background-color: $purple;
-    color: white;
-  }
-}
-
 .old-price {
   text-decoration: line-through;
   font-size: 0.9rem;

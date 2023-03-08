@@ -1,3 +1,4 @@
+@import "../../styles/variables";
 .grid {
   width: 100%;
   max-width: 1100px;
@@ -6,4 +7,34 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
+}
+
+.not-found {
+  margin: 100px auto;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: $blue;
+}
+
+.loader {
+  animation: 1.5s linear infinite spinner;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: solid 3px $purple;
+  border-bottom-color: $yellow;
+  margin: 100px auto;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
