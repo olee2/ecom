@@ -6,7 +6,7 @@ interface IProduct {
   discountedPrice: number;
   imageUrl: string;
   rating: number;
-  tags: object;
+  tags: Array<String>;
   reviews: object;
   discountedPercent?: number | null;
 }
