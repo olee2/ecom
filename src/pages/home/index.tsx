@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "../../components/hero";
-import { useProductContext } from "../../components/productProvider";
+import { useProductContext } from "../../ProductProvider";
 import Card from "../../components/card";
 import "./home.scss";
+import fetchData from "../../utils/fetchData";
+import discounts from "../../utils/discounts";
 
 function Home() {
-  const products = useProductContext();
+  const { products, setProducts } = useProductContext();
+
+  useEffect(() => {
+    fetchData()
+      .then((data) => {
+        const withDiscount = discounts(data);
+        setProducts(withDiscount);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   return (
     <main>

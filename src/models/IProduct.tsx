@@ -8,7 +8,7 @@ interface IProduct {
   rating: number;
   tags: object;
   reviews: object;
-  discountedPercent: number | null;
+  discountedPercent?: number | null;
 }
 
 export default IProduct;
