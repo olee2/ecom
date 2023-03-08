@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+
+.search-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: $bg-light;
+  padding: 1rem 0;
+}
+
+.search-label {
+  color: $text-color;
+}
+
+.search {
+  padding: 0.5rem;
+  background-image: url("../../assets/search.svg");
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  border: none;
+  border-radius: 5px;
+  box-shadow: #6f4bf226 0px 0px 0px 1px;
+  &:focus {
+    outline: none;
+    box-shadow: #6f4bf233 0px 0px 0px 2px;
+  }
+}
