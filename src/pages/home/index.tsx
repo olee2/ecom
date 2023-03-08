@@ -27,21 +27,32 @@ function Home() {
   }, []);
 
   useEffect(() => {
+    setLoader(true);
     let match: IProduct[] = [];
-    const allItems = JSON.parse(localStorage.getItem("allProducts") || "");
+    let allItems: IProduct[] = [];
+    const value = localStorage.getItem("allProducts");
+
+    if (typeof value === "string") {
+      allItems = JSON.parse(value);
+    }
 
     if (query.length) {
       match = allItems.filter((p: any) => searchAlgo(p, query));
       if (match.length) {
         setNotFound(false);
         setProducts(match);
+        setLoader(false);
       } else {
         setNotFound(true);
+        setLoader(false);
       }
     } else {
       setProducts(allItems);
       setNotFound(false);
+      setLoader(false);
     }
+
+    console.log(match);
   }, [query]);
 
   const handleQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
