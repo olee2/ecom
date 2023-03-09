@@ -1,0 +1,82 @@
+@import "../../styles/variables";
+
+.contact-banner {
+  background-image: linear-gradient(
+      rgba(248, 249, 250, 0.6),
+      rgba(248, 249, 250, 0.9),
+      rgba(248, 249, 250, 0.6)
+    ),
+    url("../../assets/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 20rem;
+  color: $blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-form {
+  display: flex;
+  padding: 1.5rem 0;
+  color: $text-color;
+  flex: 1;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+
+  h1 {
+    margin-bottom: 3rem;
+    align-self: flex-start;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: #6e4af233 0px 0px 0px 2px;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    border-radius: 5px;
+
+    span {
+      width: 85px;
+    }
+
+    input,
+    textarea {
+      flex: 1;
+      border: none;
+      transition: 0.2s;
+      background-color: $bg-light;
+      padding: 0.5rem;
+      box-shadow: #6f4bf226 0px 0px 0px 2px;
+
+      &:focus {
+        outline: none;
+        box-shadow: #6f4bf226 0px 0px 0px 4px;
+      }
+    }
+  }
+
+  .btn {
+    align-self: flex-end;
+    min-width: 6rem;
+  }
+
+  .textarea-label {
+    min-height: 200px;
+    flex-direction: column;
+    flex: 1;
+    align-items: unset;
+
+    textarea {
+      resize: none;
+    }
+  }
+}

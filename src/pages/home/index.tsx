@@ -37,7 +37,7 @@ function Home() {
     }
 
     if (query.length) {
-      match = allItems.filter((p: any) => searchAlgo(p, query));
+      match = allItems.filter((p) => searchAlgo(p, query));
       if (match.length) {
         setNotFound(false);
         setProducts(match);

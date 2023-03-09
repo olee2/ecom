@@ -13,6 +13,7 @@
 
 .search-label {
   color: $text-color;
+  font-size: 1.2rem;
 }
 
 .search {
@@ -24,6 +25,7 @@
   max-width: 100%;
   border-radius: 5px;
   box-shadow: #6f4bf226 0px 0px 0px 1px;
+  transition: 0.2s;
   &:focus {
     outline: none;
     box-shadow: #6f4bf233 0px 0px 0px 2px;
