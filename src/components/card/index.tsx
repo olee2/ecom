@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./card.scss";
 import IProduct from "../../models/IProduct";
+import Price from "../price";
 
 function Card(props: IProduct) {
   const {
@@ -28,15 +29,7 @@ function Card(props: IProduct) {
           <p className="description">{description}</p>
         </div>
         <div className="priceBtnContainer">
-          {discountedPrice !== price ? (
-            <div>
-              {" "}
-              <p className="old-price">NOK {price}</p>
-              <p className="price">NOK {discountedPrice}</p>
-            </div>
-          ) : (
-            <p className="price">NOK {price}</p>
-          )}
+          <Price discountedPrice={discountedPrice} price={price} />
           <Link className="btn" to={`/product/${id}`}>
             View Product
           </Link>

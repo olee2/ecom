@@ -48,10 +48,6 @@
   color: $text-color;
 }
 
-.price {
-  font-size: 1.2rem;
-}
-
 .discount {
   position: absolute;
   padding: 0.5rem;
@@ -67,9 +63,4 @@
   align-items: flex-end;
   justify-content: space-between;
   color: $text-color;
-}
-
-.old-price {
-  text-decoration: line-through;
-  font-size: 0.9rem;
 }
