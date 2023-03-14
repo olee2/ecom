@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+.product-main {
+  color: $text-color;
+  .inner-container {
+    flex-direction: row-reverse;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .product-info {
+    flex: 1;
+  }
+
+  .img-container {
+    flex: 1;
+    position: relative;
+    box-shadow: $shadow;
+    border-radius: 5px;
+
+    img {
+      border-radius: 5px;
+    }
+  }
+}
