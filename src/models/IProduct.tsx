@@ -7,7 +7,7 @@ interface IProduct {
   imageUrl: string;
   rating: number;
   tags: Array<String>;
-  reviews: object;
+  reviews: Array<{}>;
   discountedPercent?: number | null;
 }
 
