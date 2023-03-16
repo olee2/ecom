@@ -5,7 +5,6 @@ import "./rating.scss";
 
 interface RatingProps {
   rating: number;
-  numReviews: number;
 }
 
 const stars = (num: number) => {
@@ -30,12 +29,8 @@ const stars = (num: number) => {
   return jsx;
 };
 
-function Rating({ rating, numReviews }: RatingProps) {
-  return (
-    <div className="stars-container">
-      {stars(rating)}({numReviews} reviews)
-    </div>
-  );
+function Rating({ rating }: RatingProps) {
+  return <div className="stars-container">{stars(rating)}</div>;
 }
 
 export default Rating;

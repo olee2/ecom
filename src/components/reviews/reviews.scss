@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+
+.review {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+    border-bottom: 1px solid $purple;
+    width: 4rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.user-rating {
+  p {
+    font-size: 1.2rem;
+  }
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.review-description {
+  margin-top: 0.5rem;
+  font-style: italic;
+}

@@ -2,14 +2,47 @@
 
 .product-main {
   color: $text-color;
+
   .inner-container {
     flex-direction: row-reverse;
     gap: 2rem;
     align-items: center;
   }
 
+  h1 {
+    margin-top: 1rem;
+  }
+
   .product-info {
     flex: 1;
+  }
+
+  .rating-container {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .reviews-container {
+    border-top: 1px solid $border-color;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+
+  .reviews-btn {
+    border: none;
+    background-color: unset;
+    align-self: flex-start;
+    color: $purple;
+    text-decoration: underline;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+      color: $lighter-purple;
+    }
   }
 
   .img-container {
@@ -22,10 +55,23 @@
       border-radius: 5px;
     }
   }
+  .price-container {
+    margin: 1rem 0;
 
+    .price {
+      font-size: 1.5rem;
+    }
+  }
   @media screen and (max-width: $small) {
     .inner-container {
       flex-direction: column-reverse;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .product-info {
+      flex: none;
+      width: 100%;
     }
 
     .img-container {
