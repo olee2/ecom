@@ -14,6 +14,7 @@ interface IProduct {
     description: string;
   }>;
   discountedPercent?: number | null;
+  amount?: number;
 }
 
 export default IProduct;
