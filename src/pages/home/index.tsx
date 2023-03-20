@@ -48,8 +48,6 @@ function Home() {
       setProducts(allItems);
       setNotFound(false);
     }
-
-    console.log(match);
   }, [query]);
 
   const handleQuery = (event: React.ChangeEvent<HTMLInputElement>) => {
