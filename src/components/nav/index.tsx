@@ -35,9 +35,7 @@ function Nav() {
             Contact
           </Link>
         </div>
-        <Link to="/cart">
-          <Cart />
-        </Link>
+        <Cart />
       </div>
     </nav>
   );
