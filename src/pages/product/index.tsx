@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../features/cart/cartSlice";
 import IProduct from "../../models/IProduct";
 import "./product.scss";
 import Rating from "../../components/rating";
@@ -11,6 +13,7 @@ function Product() {
   const [showReviews, setShowReviews] = useState(false);
   let products;
   const value = localStorage.getItem("allProducts");
+  const dispatch = useDispatch();
 
   const handleShowReviews = () => {
     setShowReviews(!showReviews);
@@ -48,7 +51,11 @@ function Product() {
           <div className="price-container">
             <Price discountedPrice={discountedPrice} price={price} />
           </div>
-          <button type="button" className="btn">
+          <button
+            type="button"
+            className="btn"
+            onClick={() => dispatch(addItem(product))}
+          >
             Add to Cart
           </button>
           <div>

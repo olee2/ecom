@@ -1,9 +1,7 @@
+import ICart from "./ICart";
+
 interface RootState {
-  cart: {
-    amount: number;
-    total: number;
-    cartItems: any[];
-  };
+  cart: ICart;
 }
 
 export default RootState;
