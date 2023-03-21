@@ -9,7 +9,7 @@ function Cart() {
   const { amount } = useSelector((state: RootState) => state.cart);
 
   return (
-    <Link to="/checkout" className="cart-container">
+    <Link to="checkout" className="cart-container">
       <div className="inner-cart">
         <div className="cart-amount">
           <p>{amount}</p>

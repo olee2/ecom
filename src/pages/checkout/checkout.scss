@@ -1,0 +1,80 @@
+@import "../../styles/variables.scss";
+
+.checkout-main {
+  .inner-container {
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: $blue;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: $blue;
+  }
+
+  .btn {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+.cart-items {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 5px;
+  background-color: $bg-light;
+  box-shadow: shadow;
+  min-width: 400px;
+
+  h2 {
+    font-weight: 400;
+    color: $blue;
+  }
+
+  .image-container {
+    width: 5rem;
+    height: 5rem;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px 0 0 5px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.total {
+  display: flex;
+  gap: 2rem;
+  padding-top: 0.5rem;
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+.amount {
+  border-bottom: 1px solid $purple;
+  padding-bottom: 0.5rem;
+}

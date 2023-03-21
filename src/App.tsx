@@ -5,6 +5,7 @@ import Layout from "./components/layout";
 import Home from "./pages/home";
 import Product from "./pages/product";
 import Contact from "./pages/contact";
+import Checkout from "./pages/checkout";
 import ProductProvider from "./ProductProvider";
 import { calculateTotal } from "./features/cart/cartSlice";
 import RootState from "./models/RootState";
@@ -27,6 +28,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="contact" element={<Contact />} />
             <Route path="product/:id" element={<Product />} />
+            <Route path="checkout" element={<Checkout />} />
           </Route>
         </Routes>
       </ProductProvider>

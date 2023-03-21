@@ -19,10 +19,13 @@ const cartSlice = createSlice({
     },
     calculateTotal: (state) => {
       let amount = 0;
+      let total = 0;
       state.cartItems.forEach((item) => {
         amount += item.amount || 0;
+        total += item.discountedPrice * (item.amount || 0);
       });
       state.amount = amount;
+      state.total = Number(total.toFixed(2));
     },
   },
 });
