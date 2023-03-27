@@ -2,7 +2,16 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import ICart from "../../models/ICart";
 import IProduct from "../../models/IProduct";
 
-const initialState: ICart = { cartItems: [], total: 0, amount: 0 };
+const localStorageCart = localStorage.getItem("cart");
+
+let initialState: ICart;
+
+if (localStorageCart) {
+  initialState = JSON.parse(localStorageCart);
+} else {
+  initialState = { cartItems: [], total: 0, amount: 0 };
+}
+
 const cartSlice = createSlice({
   name: "cart",
   initialState,
