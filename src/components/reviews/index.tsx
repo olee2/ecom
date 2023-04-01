@@ -10,9 +10,9 @@ interface IReview {
 }
 
 function Review({ review }: { review: IReview }) {
-  const { username, description, rating, id } = review;
+  const { username, description, rating } = review;
   return (
-    <div className="review" key={id}>
+    <div className="review">
       <div className="user-rating">
         <p>{username}</p>
         <Rating rating={rating} />

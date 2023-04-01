@@ -70,7 +70,9 @@ function Product() {
                 </button>
 
                 {showReviews &&
-                  reviews.map((review) => <Review review={review} />)}
+                  reviews.map((review) => (
+                    <Review review={review} key={review.id} />
+                  ))}
               </div>
             ) : null}
             {}

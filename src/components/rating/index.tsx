@@ -15,7 +15,6 @@ const stars = (num: number) => {
       jsx.push(<img src={fullStar} alt="full star" key={i} />);
     }
   } else {
-    console.log((4.2 % 1) * 10);
     for (let i = 1; i <= Math.floor(num); i++) {
       jsx.push(<img src={fullStar} alt="full star" key={i} />);
     }
