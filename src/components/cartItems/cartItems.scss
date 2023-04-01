@@ -7,7 +7,7 @@
   flex: 1;
   width: 100%;
 
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: $medium) {
     flex: none;
     border-top: 1px solid $border-color;
     padding-top: 2rem;

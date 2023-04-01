@@ -7,7 +7,7 @@
     align-items: center;
     gap: 2rem;
 
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: $medium) {
       flex-direction: column-reverse;
     }
   }
