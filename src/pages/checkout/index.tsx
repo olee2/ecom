@@ -23,7 +23,7 @@ function Checkout() {
               <p>Total:</p>
               <p>{total} NOK</p>
             </div>
-            <Link className="btn" to="success">
+            <Link className="btn" to="/success">
               Checkout
             </Link>
           </div>

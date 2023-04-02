@@ -6,10 +6,10 @@ import Home from "./pages/home";
 import Product from "./pages/product";
 import Contact from "./pages/contact";
 import Checkout from "./pages/checkout";
+import Success from "./pages/success";
 import ProductProvider from "./ProductProvider";
 import { calculateTotal } from "./features/cart/cartSlice";
 import RootState from "./models/RootState";
-
 import "./styles/styles.scss";
 
 function App() {
@@ -29,6 +29,7 @@ function App() {
             <Route path="contact" element={<Contact />} />
             <Route path="product/:id" element={<Product />} />
             <Route path="checkout" element={<Checkout />} />
+            <Route path="success" element={<Success />} />
           </Route>
         </Routes>
       </ProductProvider>
