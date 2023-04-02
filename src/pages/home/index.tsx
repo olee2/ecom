@@ -12,6 +12,7 @@ function Home() {
   const [notFound, setNotFound] = useState(false);
   const { products, setProducts } = useProductContext();
   const [query, setQuery] = useState("");
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     setLoader(true);
@@ -22,8 +23,9 @@ function Home() {
         setLoader(false);
         localStorage.setItem("allProducts", JSON.stringify(withDiscount));
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
+        setError(true);
+        setLoader(false);
       });
   }, []);
 
@@ -66,6 +68,10 @@ function Home() {
           <button type="button" className="btn" onClick={() => setQuery("")}>
             Reset
           </button>
+        </div>
+      ) : error ? (
+        <div className="not-found">
+          <p>An error occured.</p>
         </div>
       ) : (
         <div className="grid">
