@@ -1,10 +1,28 @@
 @import "../../styles/variables";
 
+.success-main {
+  color: $text-color;
+  .inner-container {
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+  }
+}
+
 .order-details {
   border: 1px solid $border-color;
   padding: 1rem;
   margin-top: 0.5rem;
   max-width: 30rem;
+  width: 100%;
 }
 
 .order-details-item {

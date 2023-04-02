@@ -8,7 +8,7 @@ import "./success.scss";
 function Success() {
   const { cartItems, total } = useSelector((state: RootState) => state.cart);
   const [cart, setCart] = useState<any>([]);
-
+  const [localTotal, setLocalTotal] = useState(0);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -17,11 +17,12 @@ function Success() {
       navigate("/");
     }
     setCart(cartItems);
+    setLocalTotal(total);
     dispatch(clearCart());
   }, []);
 
   return (
-    <main>
+    <main className="success-main">
       <div className="inner-container">
         {" "}
         <h1>Your order was successful!</h1>
@@ -46,7 +47,7 @@ function Success() {
               </div>
             ))}
           </div>
-          <div>Total: {total} NOK</div>
+          <div>Total: {localTotal} NOK</div>
         </div>
       </div>
     </main>
