@@ -10,7 +10,7 @@ function Header() {
       <div className="inner-header inner-container">
         <div className="logo-nav">
           <Link to="/">
-            <img src={logo} alt="" className="logo" />
+            <img src={logo} alt="logo" className="logo" />
           </Link>
           <Nav />
         </div>

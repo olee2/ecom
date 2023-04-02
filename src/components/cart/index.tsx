@@ -14,7 +14,7 @@ function Cart() {
         <div className="cart-amount">
           <p>{amount}</p>
         </div>
-        <img src={cart} alt="" className="cart-img" />
+        <img src={cart} alt="shopping bag" className="cart-img" />
       </div>
     </Link>
   );

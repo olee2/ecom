@@ -22,7 +22,7 @@ function Nav() {
         <img
           src={hamburger}
           className={`${display && "active-hamburger"}`}
-          alt=""
+          alt="hamburger icon"
         />
       </button>
 

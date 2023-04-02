@@ -10,7 +10,7 @@ function Footer() {
           <h2>Ecom Ltd</h2>
           <div className="copyright-container">
             <p>Copyright</p>
-            <img src={Copyright} alt="" className="copyright" />
+            <img src={Copyright} alt="copyright icon" className="copyright" />
             <p>2023. All rights reserved</p>
           </div>
         </div>
