@@ -17,6 +17,7 @@ function Contact() {
   const email = register("email", { required: true });
   const textField = register("textField", { required: true, minLength: 3 });
 
+  // eslint-disable-next-line
   const onSubmit = handleSubmit((data) => console.log(data));
 
   return (
