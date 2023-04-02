@@ -31,7 +31,7 @@ function Success() {
         <div className="order-details">
           <div className="order-details-items">
             {cart.map((item: any) => (
-              <div className="order-details-item">
+              <div className="order-details-item" key={item.id}>
                 <p>
                   - {item.title}
                   {item.amount !== undefined && item.amount > 1
