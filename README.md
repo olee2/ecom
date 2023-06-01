@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+# Ecom
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://github.com/olee2/portfolio2/blob/master/src/assets/ecom.png)
 
-## Available Scripts
+JavaScript Frameworks Course Assignment
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+For this project, I leveraged React's functionality to develop a responsive e-commerce store, using the API provided. The store includes several pages: a homepage, individual product pages, a cart page, a checkout success page, and a contact page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The homepage features a list of all products and a look-ahead search bar that filters products by name. Clicking a product redirects to the product's individual page.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The individual product pages display the product's title, description, image, and any available reviews. If a product is discounted, the amount of discount is calculated and displayed. These pages also contain an "Add to Cart" button that adds the product to the shopping cart.
 
-### `npm test`
+The website header, incorporated into all pages through a <Layout> component, features a navigation bar and a cart icon component. This icon acts as a button, displaying the current number of items in the cart and leading to the cart page when clicked.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The cart page lists all chosen products and the total cost, with a checkout button that leads to the checkout success page. Once a user reaches this page, their shopping cart is cleared, and a success message is displayed, along with a link back to the store.
 
-### `npm run build`
+The contact page includes a validated form for the user's full name, subject, email, and a message body. Each field requires a minimum of 3 characters, and the email field requires a valid email address.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The website uses React Router for page switching and either styled-components or CSS Modules for styling. The design was created from scratch for a unique look and feel. While TypeScript was not required, the code was formatted neatly and efficiently for readability and maintenance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Built With
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- HTML
+- TypeScript
+- React.js
+- SCSS
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Installing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repo:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+git clone https://github.com/olee2/ecom.git
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. Install the dependencies:
 
-## Learn More
+```
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Running
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To run the app, run the following commands:
+
+```bash
+npm run start
+```
+
+## Contact
+
+[LinkedIn](https://www.linkedin.com/in/ole-andr%C3%A9-eikrem-1b0752202/)
+[GitHub](https://github.com/olee2)
